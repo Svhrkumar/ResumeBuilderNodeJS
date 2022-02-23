@@ -14,8 +14,8 @@ mongoose
 		console.log('DB Connection Failed', err);
 		process.exit(1);
 	});
-
-app.listen(1919, (res) => {
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, (res) => {
 	console.log('server is started');
 });
 //skills API
