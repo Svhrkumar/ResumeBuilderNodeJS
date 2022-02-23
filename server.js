@@ -19,7 +19,9 @@ app.listen(PORT, (res) => {
 	console.log('server is started');
 });
 //skills API
-
+app.get('/', (req, res) => {
+	res.status(200).send('Heloo Raghav');
+});
 app.use('/api/v1/', resumeDetails);
 app.get('/skills', (req, res) => {
 	res.send(skillsData);
