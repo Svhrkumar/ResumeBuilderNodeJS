@@ -7,7 +7,7 @@ resumeDetails.post(
 	'/seed',
 	expressAsyncHandler(async (req, res) => {
 		console.log(req.body);
-		const createdSkills = await skillsDetails.insertMany(data);
+		const createdSkills = await skillsdetails.insertMany(data);
 		res.send(createdSkills);
 	})
 );
