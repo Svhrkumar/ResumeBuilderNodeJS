@@ -1,13 +1,13 @@
 const express = require('express');
 const resumeDetails = express.Router();
-const skillsDetails = require('../schema/skillsData');
+const skillsData = require('../schema/skillsData');
 const data = require('../skills.json');
 const expressAsyncHandler = require('express-async-handler');
 resumeDetails.post(
 	'/seed',
 	expressAsyncHandler(async (req, res) => {
 		console.log(req.body);
-		const createdSkills = await skillsdetails.insertMany(data);
+		const createdSkills = await skillsData.insertMany(data);
 		res.send(createdSkills);
 	})
 );
@@ -15,7 +15,7 @@ resumeDetails.post(
 resumeDetails.get(
 	'/skills',
 	expressAsyncHandler(async (req, res) => {
-		const skillsList = await skillsdetails.find();
+		const skillsList = await skillsData.find();
 		res.send(skillsList);
 	})
 );
