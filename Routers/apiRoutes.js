@@ -19,5 +19,8 @@ resumeDetails.get(
 		res.send(skillsList);
 	})
 );
+resumeDetails.get('/', (req, res) => {
+	res.status(200).send('Heloo Raghav');
+});
 
 module.exports = resumeDetails;
