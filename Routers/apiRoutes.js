@@ -15,7 +15,7 @@ resumeDetails.post(
 resumeDetails.get(
 	'/skills',
 	expressAsyncHandler(async (req, res) => {
-		const skillsList = await skillsDetails.find();
+		const skillsList = await skillsdetails.find();
 		res.send(skillsList);
 	})
 );
