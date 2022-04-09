@@ -26,5 +26,5 @@ app.get('/skills', (req, res) => {
 	res.send(skillsData);
 });
 app.get('/', (req, res) => {
-	res.send('Hiii Rk SErvices');
+	res.send('Hiii Raghav your services are upandrunning');
 });
